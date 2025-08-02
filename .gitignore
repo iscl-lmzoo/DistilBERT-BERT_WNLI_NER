@@ -205,3 +205,30 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Data files (if you don’t want to push large CSV or datasets)
+*.csv
+/data/
+
+# Logs
+*.log
+
+# IDE/project files
+.vscode/
+.idea/
+
+# MacOS system files
+.DS_Store
