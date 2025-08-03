@@ -63,7 +63,7 @@ Even though DistilBERT performs slightly lower than BERT in some tasks like NER 
 
 - **Ayperi Khudaybergenova** — implementation, experiments, analysis  
 - ** ** — conceptual guidance, research direction  
-- ** ** — code review and debugging support
+- **Mario Kuzmanov** — code review and debugging support
 
 ![Results Bar Graph](results.png)
 
