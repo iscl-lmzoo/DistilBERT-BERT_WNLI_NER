@@ -65,5 +65,6 @@ Even though DistilBERT performs slightly lower than BERT in some tasks like NER 
 - ** ** — conceptual guidance, research direction  
 - ** ** — code review and debugging support
 
+![Model Comparison](images/results.png)
 
 
