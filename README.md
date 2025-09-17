@@ -44,7 +44,7 @@ Results show BERT achieving higher F1 and accuracy scores, while DistilBERT offe
 [View the NER comparison code here](https://github.com/ayperiKhudaybergenova/bert-distilbert-comparison-WNLI-NER/blob/main/bert%2CdistilBERT_NER_finetuned.py)
 
 
-2. Qualitative analysis: comparing named entities detected on **CoNLL-2003 test set**
+2. Quantitative analysis: comparing named entities detected on **CoNLL-2003 test set**
    
 Although  Inference time is doubled when working with BERT,the results show the advantage of DistilBERT.
 
