@@ -41,7 +41,7 @@ Results show BERT achieving higher F1 and accuracy scores, while DistilBERT offe
 * BERT F1 Score: 79.03%
 * DistilBERT F1 Score: 63.77%
 
-[View the NER comparison code here](https://github.com/ayperiKhudaybergenova/bert-distilbert-comparison-WNLI-NER/blob/main/bert%2CdistilBERT_NER_finetuned.py)
+[View the NER comparison code here](NER_finetuned_RealTestSet.py)
 
 
 2. Quantitative analysis: comparing named entities detected on **CoNLL-2003 test set**
