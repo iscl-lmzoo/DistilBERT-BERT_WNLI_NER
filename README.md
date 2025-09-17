@@ -43,6 +43,20 @@ Results show BERT achieving higher F1 and accuracy scores, while DistilBERT offe
 
 [View the NER comparison code here](https://github.com/ayperiKhudaybergenova/bert-distilbert-comparison-WNLI-NER/blob/main/bert%2CdistilBERT_NER_finetuned.py)
 
+
+2. Qualitative analysis: comparing named entities detected on **CoNLL-2003 test set**
+   
+Although  Inference time is doubled when working with BERT,the results show the advantage of DistilBERT.
+
+* BERT F1 Score: 90.50%
+* DistilBERT F1 Score: 93.87%
+
+
+DistilBERT doing slightly better on CoNLL-2003 could be because of regularisation effects during distillation, but its worse performance in real-life examples might show that compression comes with loss of robustness.
+These results underline the importance of evaluating on both standard benchmarks and out-of-domain examples to get a realistic picture of model performance.
+
+
+
 ---
 
 ##  4. Zero-shot Evaluation of Pre-trained Models on WNLI
