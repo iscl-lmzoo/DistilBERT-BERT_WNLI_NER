@@ -34,8 +34,7 @@ This project compares the performance of two transformer models — BERT and Dis
 
 The analysis includes:
 
-1. Qualitative analysis: comparing named entities detected on real-world test sentences.
-2. Quantitative evaluation: calculating accuracy, precision, recall, and F1 score on a labeled dataset.
+1. Qualitative analysis: comparing named entities detected on **Real-world test sentences.**
 
 Results show BERT achieving higher F1 and accuracy scores, while DistilBERT offers faster inference and acceptable trade-offs for lightweight applications.
 
