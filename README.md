@@ -51,7 +51,7 @@ Although  Inference time is doubled when working with BERT,the results show the 
 * BERT F1 Score: 90.50%
 * DistilBERT F1 Score: 93.87%
 
-
+[View the NER comparison code here](NER_finetuned_CoNLLTestSet.py)
 DistilBERT doing slightly better on CoNLL-2003 could be because of regularisation effects during distillation, but its worse performance in real-life examples might show that compression comes with loss of robustness.
 These results underline the importance of evaluating on both standard benchmarks and out-of-domain examples to get a realistic picture of model performance.
 
