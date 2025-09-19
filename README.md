@@ -70,7 +70,7 @@ This project evaluates zero-shot performance of pre-trained language models on t
 [View the zero-shot evaluation code here](https://github.com/ayperiKhudaybergenova/bert-distilbert-comparison-WNLI-NER/blob/main/bert%2CdistilBERT_wnli_zeroshot.py)
 
 
-Even though DistilBERT performs slightly lower than BERT in some tasks like NER and WNLI, it still retains around 97% of BERT’s performance while being significantly smaller and faster. Depending on your task requirements — whether accuracy or efficiency is the priority — **either model can be the better choice**.
+Even though DistilBERT performs slightly lower than BERT in some tasks like NER and WNLI, it still retains around 97% of BERT’s performance while being significantly smaller and faster. It is already a win. Depending on your task requirements — whether accuracy or efficiency is the priority — **either model can be the better choice**.
 
 
 👥 Contributors
