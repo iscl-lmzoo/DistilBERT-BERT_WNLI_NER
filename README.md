@@ -36,7 +36,7 @@ The analysis includes:
 
 1. Qualitative analysis: comparing named entities detected on **Real-world test sentences.**
 
-Results show BERT achieving higher F1 and accuracy scores, while DistilBERT offers faster inference and acceptable trade-offs for lightweight applications.
+Results show BERT achieving higher F1 and accuracy scores, while DistilBERT offers faster inference and some  trade-offs for lightweight applications.
 
 * BERT F1 Score: 79.03%
 * DistilBERT F1 Score: 63.77%
@@ -46,15 +46,14 @@ Results show BERT achieving higher F1 and accuracy scores, while DistilBERT offe
 
 2. Quantitative analysis: comparing named entities detected on **CoNLL-2003 test set**
    
-Although  Inference time is doubled when working with BERT,the results show the advantage of DistilBERT.
+Even though 'Inference time' is doubled when working with BERT,the results show the better results of DistilBERT. Overall, both models reached significantly high performance. 
 
 * BERT F1 Score: 90.50%
 * DistilBERT F1 Score: 93.87%
 
 [View the NER comparison code here](NER_finetuned_CoNLLTestSet.py)
 
-DistilBERT doing slightly better on CoNLL-2003 could be because of regularisation effects during distillation, but its worse performance in real-life examples might show that compression comes with loss of robustness.
-These results underline the importance of evaluating on both standard benchmarks and out-of-domain examples to get a realistic picture of model performance.
+DistilBERT doing slightly better on CoNLL-2003 could be because of regularisation effects during distillation, but its worse performance in real-life examples might show that compression comes with loss of robustness.These results underline the importance of evaluating on both standard benchmarks and out-of-domain examples to get a realistic picture of model performance.
 
 
 
@@ -70,7 +69,7 @@ This project evaluates zero-shot performance of pre-trained language models on t
 [View the zero-shot evaluation code here](https://github.com/ayperiKhudaybergenova/bert-distilbert-comparison-WNLI-NER/blob/main/bert%2CdistilBERT_wnli_zeroshot.py)
 
 
-Even though DistilBERT performs slightly lower than BERT in some tasks like NER and WNLI, it still retains around 97% of BERT’s performance while being significantly smaller and faster. It is already a win. Depending on your task requirements — whether accuracy or efficiency is the priority — **either model can be the better choice**.
+In Conclusion,even though DistilBERT performs slightly lower than BERT in some tasks ( NER and WNLI), it still retains around 97% of BERT’s performance while being significantly smaller and faster. It is already a win. Depending on your task requirements — whether accuracy or efficiency is the priority — **either model can be the better choice**.
 
 
 👥 Contributors
