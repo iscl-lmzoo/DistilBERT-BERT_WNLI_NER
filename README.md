@@ -75,7 +75,7 @@ In Conclusion,even though DistilBERT performs slightly lower than BERT in some t
 👥 Contributors
 
 - **Ayperi Khudaybergenova** — implementation, experiments, analysis  
-- ** ** — conceptual guidance, research direction  
+- **Cagri Coltekin** — conceptual guidance, research direction  
 - **Mario Kuzmanov** — code review and debugging support
 
 ![Results Bar Graph](results.png)
