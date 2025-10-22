@@ -1,13 +1,12 @@
 # Bert fine-tuned for 5 epochs on WNLI
 
-# 1. Install/upgrade transformers and datasets (uncomment if needed)
+#  Install/upgrade transformers and datasets (uncomment if needed)
 # !pip install --upgrade transformers datasets
 
-# 2. Import packages
 from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
 
-# 3. (Optional) Check versions to make sure
+#  (Optional) Check versions to make sure
 import transformers
 import datasets
 
@@ -18,25 +17,25 @@ print("Datasets version:", datasets.__version__)
 import os
 os.system("rm -rf /root/.cache/huggingface/datasets")
 
-# Load WNLI train split
+
 wnli_train = load_dataset("glue", "wnli", split="train")
 
-# Load tokenizer and model
+
 model_name = "bert-base-uncased"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2)
 
-# Tokenize function
+
 def preprocess(batch):
     return tokenizer(batch['sentence1'], batch['sentence2'], truncation=True, padding=True)
 
-# Tokenize dataset
+
 wnli_train_tokenized = wnli_train.map(preprocess, batched=True)
 
-# Set PyTorch format
+
 wnli_train_tokenized.set_format('torch', columns=['input_ids', 'attention_mask', 'label'])
 
-# Training arguments (no evaluation_strategy)
+
 training_args = TrainingArguments(
     output_dir="./results",
     num_train_epochs=5,
@@ -46,14 +45,14 @@ training_args = TrainingArguments(
     disable_tqdm=False,
 )
 
-# Trainer setup
+
 trainer = Trainer(
     model=model,
     args=training_args,
     train_dataset=wnli_train_tokenized,
 )
 
-# Start training
+
 trainer.train()
 
 # Output (accuracy at various logging steps)
