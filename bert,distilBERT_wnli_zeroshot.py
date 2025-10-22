@@ -1,4 +1,4 @@
-# Install transformers and mount Google Drive
+
 !pip install transformers
 !pip install --upgrade transformers
 
@@ -7,7 +7,7 @@ drive.mount('/content/drive')
 
 file_path = '/content/drive/My Drive/train_complete.csv'
 
-# Read and print first 5 lines from the file
+
 with open(file_path, 'r') as f:
     for _ in range(5):
         print(f.readline().strip())
