@@ -5,7 +5,7 @@ from datasets import DatasetDict, Dataset
 from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
 from seqeval.metrics import f1_score, accuracy_score
 
-# 1️⃣ Load your local CoNLL-2003 data
+
 data_dir = "/content/conll2003"
 
 def read_conll(path):
@@ -38,12 +38,12 @@ dataset = DatasetDict({
 print(dataset)
 print("Sample:", dataset["train"][0])
 
-# 2️⃣ Get label list from training data
+
 unique_tags = set(tag for doc in dataset["train"]["ner_tags"] for tag in doc)
 label_list = sorted(list(unique_tags))
 print("Labels:", label_list)
 
-# 3️⃣ Convert Hugging Face spans → BIO
+
 def hf_preds_to_bio(tokens, ner_results):
     pred_tags = ["O"] * len(tokens)
     for ent in ner_results:
@@ -62,7 +62,7 @@ def hf_preds_to_bio(tokens, ner_results):
             char_pos = char_pos_end + 1
     return pred_tags
 
-# 4️⃣ Evaluation function
+
 def evaluate_model(model_name, dataset, n_samples=None):
     print(f"\n🚀 Evaluating {model_name}")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -95,7 +95,7 @@ def evaluate_model(model_name, dataset, n_samples=None):
     print(f"📊 F1 score: {f1:.4f}")
     print(f"✅ Accuracy: {acc:.4f}")
 
-# 5️⃣ Compare DistilBERT vs BERT
+
 evaluate_model("elastic/distilbert-base-cased-finetuned-conll03-english", dataset, n_samples=200)
 evaluate_model("dslim/bert-base-NER", dataset, n_samples=200)
 
